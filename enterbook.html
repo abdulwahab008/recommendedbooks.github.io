@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Additional CSS for Enter Book Page */
+        .book-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .book-form h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0a0909;
+        }
+
+        .book-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .book-form label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #0a0909;
+        }
+
+        .book-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .book-form button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .entered-books {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .entered-books h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0a0909;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .book-item {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .book-item p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #0a0909;
+        }
+
+        .book-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .book-item button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #dc3545;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-item button:hover {
+            background-color: #bd2130;
+        }
+
+        .book-item button + button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enter Book</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="summaries.html">Summaries</a></li>
+            <li><a href="gifts.html">Gifts</a></li>
+            <li><a href="book.html">Books</a></li>
+            
+        </ul>
+    </nav>
+    <main>
+        <section class="book-form">
+            <h2>Add New Book</h2>
+            <form id="book-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required><br>
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required><br>
+                <label for="image">Image URL:</label>
+                <input type="text" id="image" name="image"><br>
+                <label for="file">Upload Image:</label>
+                <input type="file" id="file" name="file" accept="image/*"><br>
+                <label for="link">Link:</label>
+                <input type="text" id="link" name="link" required><br>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea><br>
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+        <section class="entered-books">
+            <h2>Entered Books</h2>
+            <div class="book-list" id="entered-books-list"></div>
+        </section>
+    </main>
+    <script src="enterbook-script.js"></script>
+    
+    
+    
+</body>
+</html>
